@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+    tools {
+       terraform 'terraform'
+    }
+
+    environment {
+
+    githubkey = credentials('gh-token')
+    def gh_build_url
+}
+    stages {
+        stage('Git checkout') {
+           steps{
+                git branch: "${GIT_BRANCH}", credentialsId: "${githubkey}", url: "${gh_build_url}"
+            }
+        }
+        stage('terraform validation check') {
+            steps{
+                sh 'terraform validate'
+            }
+        }
+        stage('terraform Init') {
+            steps{
+                sh 'terraform init'
+            }
+        }
+        stage('terraform apply') {
+            steps{
+                sh 'terraform apply --auto-approve'
+            }
+        }
+
+        stage('slack notification') {
+            steps{
+                if( currentBuild.currentResult == "SUCCESS") {
+                    slackSend channel: 'canary-develop-terraform',
+                            color: "good",
+                            sendAsText: true,
+                            message: "Job Name: ${env.JOB_NAME} #: ${env.BUILD_NUMBER}  \n Build Blue Ocean URL: <${RUN_DISPLAY_URL}|here> :white_check_mark: SUCCESS;"
+                }
+                else if( currentBuild.currentResult == "ABORTED") {
+                    slackSend channel: 'canary-develop-terraform',
+                            color: "warning",
+                            sendAsText: true,
+                            message: "Job Name: ${env.JOB_NAME} #: ${env.BUILD_NUMBER}  \n Build Blue Ocean URL: <${RUN_DISPLAY_URL}|here> :warning: ABORTED;"
+                }     
+                else ( currentBuild.currentResult == "FAILURE") {
+                    slackSend channel: 'canary-develop-terraform',
+                            color: "danger",
+                            sendAsText: true,
+                            message: "Job Name: ${env.JOB_NAME} #: ${env.BUILD_NUMBER}  \n Build Blue Ocean URL: <${RUN_DISPLAY_URL}|here> :exclamation: FAILURE;"
+                }                                     
+            }
+        }
+        
+    }
+}
