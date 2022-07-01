@@ -1,0 +1,4 @@
+'~/projects/terraformbyshahzad/houseimage.jpeg'#!/usr/bin/env python3
+from PIL import Image
+image = Image.open('~/projects/terraformbyshahzad/houseimage.jpeg')
+image.save('~/projects/terraformbyshahzad/houseimage-noexif.jpeg')
