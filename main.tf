@@ -1,7 +1,5 @@
 provider "aws" {
   region = var.aws_region
-  access_key = "----"
-  secret_key = "----"
 }
 #source bucket provider
 resource "aws_s3_bucket" "bucket_a" {

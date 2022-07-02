@@ -53,4 +53,4 @@ def handler(event):
   image_data = s3.get_object(Bucket='bucket_a', Key=file_path)
 
 
-  s3.put_object(Bucket='mybucket', Key=file_path, Body=new_image_data, Tagging='ExifStripped=True')
+  s3.put_object(Bucket='bucket_a', Key=file_path, Body=new_image_data, Tagging='ExifStripped=True')
