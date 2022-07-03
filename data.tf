@@ -14,9 +14,7 @@ data "aws_iam_policy_document" "user_a_permissions" {
     }
           
 
-    resources = ["arn:aws:s3:::my-s3bucket-bucket_a",
-                  "arn:aws:s3:::my-s3bucket-bucket_a/*",
-    ]
+    resources = ["arn:aws:s3:::my-s3bucket-bucket-a"]
   }
 
   depends_on = [
@@ -39,9 +37,7 @@ data "aws_iam_policy_document" "user_b_permissions" {
       "s3:PutObject"
     ]
 
-    resources = ["arn:aws:s3:::my-s3bucket-bucket_b",
-                  "arn:aws:s3:::my-s3bucket-bucket_b/*",
-    ]
+    resources = ["arn:aws:s3:::my-s3bucket-bucket-b/*"]
   }
 
     depends_on = [

@@ -25,24 +25,19 @@ new_image.putdata(image_contents)
 
 # Finally, create a new buffer object and put the new image file data into it:
 new_image_data = io.BytesIO()
-new_image.save(new_image_data, 'PNG') # Or the file format needed
+new_image.save(new_image_data, 'JPEG') # Or the file format needed
 new_image_data.seek(0)
 
 def handler(event):
 
   s3 = boto3.client('s3')
-
-
   file_path = event['Records'][0]['s3']['object']['key']
-
-
   file_name, file_extension = os.path.splitext(file_path)
 
-
-  if file_extension.lower() not in ['.jpg', '.png', '.jpeg']:
+  if file_extension.lower() not in ['.jpg', '.jpeg']:
     return
 
-  tagging = s3.get_object_tagging(Bucket='bucket_a', Key=file_path)
+  tagging = s3.get_object_tagging(Bucket='my-s3bucket-bucket-a', Key=file_path)
   object_tags = tagging['TagSet']
 
   for tag in object_tags:
@@ -50,7 +45,9 @@ def handler(event):
       return
 
 
-  image_data = s3.get_object(Bucket='bucket_a', Key=file_path)
+  image_data = s3.get_object(Bucket='my-s3bucket-bucket-a', Key=file_path)
 
 
-  s3.put_object(Bucket='bucket_a', Key=file_path, Body=new_image_data, Tagging='ExifStripped=True')
+  s3.put_object(Bucket='my-s3bucket-bucket-b', Key=file_path, Body=new_image_data, Tagging='ExifStripped=True')
+
+

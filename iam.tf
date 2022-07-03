@@ -1,15 +1,15 @@
 resource "aws_iam_user" "user_a" {
-  name = "UserA"
+  name = "usera"
   
 }
 
 resource "aws_iam_user" "user_b" {
-  name = "UserB"
+  name = "userb"
 
 }
 
 resource "aws_iam_user_policy" "user_a" {
-  name = "user_a policy"
+  name = "user_a_policy"
   user = aws_iam_user.user_a.name
 
   policy = <<EOF
@@ -31,7 +31,7 @@ EOF
 }
 
 resource "aws_iam_user_policy" "user_b" {
-  name = "user_b policy"
+  name = "user_b_policy"
   user = aws_iam_user.user_b.name
 
   policy = <<EOF
@@ -47,7 +47,6 @@ resource "aws_iam_user_policy" "user_b" {
       ],
       "Effect": "Allow",
       "Resource": [
-          "${aws_s3_bucket.bucket_b.arn}"
           "${aws_s3_bucket.bucket_b.arn}/*"
       ]
     }
