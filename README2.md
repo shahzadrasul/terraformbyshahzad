@@ -10,8 +10,6 @@
     <a href="https://github.com/shahzadrasul/terraformbyshahzad"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    ·
-    ·
   </p>
 </div>
 
