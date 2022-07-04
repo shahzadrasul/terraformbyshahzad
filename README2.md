@@ -27,14 +27,13 @@
 
 
 <!-- WHAT THIS REPO COVERS -->
-## S3 buckets written in Terraform
 ### Create two S3 buckets namely: bucket_a and bucket_b 
-### IAM users and roles written in Terraform
+### Create two IAM users and roles written in Terraform
 ### Create two S3 buckets namely: usera and userb 
-### Lambda function written in Python to strip image from its exif data
+### Create a Lambda function written in Python to strip image from its exif data
 ### Create a Lambda function that takes a .jpg/.jpeg image from bucket_a, removes the exif data and puts it in bucket_b.
-### Jenkinsfile to run the Terraform job with Slack notification using GitHub webhook.
-### SNS topic & SNS notifcation to take changes from S3 object put in S3 bucket for Lambda to build it's Python code.
+### Create an SNS topic & SNS notifcation to take changes from S3 object put in S3 bucket for Lambda to build it's Python code.
+### Create a Jenkinsfile to run the Terraform job with Slack notification using GitHub webhook.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
