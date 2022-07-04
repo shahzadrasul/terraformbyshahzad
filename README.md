@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-<h3 align="center">[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/shahzad-rasul-a4037b194/]</h3>
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/shahzad-rasul-a4037b194/]
 
 <h3 align="center">Terraform for S3</h3>
 
