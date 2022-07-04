@@ -55,7 +55,7 @@ Don't forget to give the project a star! Thanks again!
 
 Shahzad Rasul - shahzad.rasul123@outlook.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/shahzadrasul/terraformbyshahzad)
+Project Link: [https://github.com/shahzadrasul/terraformbyshahzad](https://github.com/shahzadrasul/terraformbyshahzad)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
