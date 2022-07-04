@@ -7,7 +7,8 @@ pipeline {
     environment {
 
     githubkey = credentials('gh-token')
-    def gh_build_url
+    def gh_build_url 
+
 }
     stages {
         stage('Git checkout') {
