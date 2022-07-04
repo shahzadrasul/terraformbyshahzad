@@ -48,14 +48,7 @@
   </ol>
 </details>
 
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://registry.terraform.io/)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `shahzadrasul`, `terraformbyshahzad`, `https://www.linkedin.com/in/shahzad-rasul-a4037b194/`
+`shahzadrasul`, `terraformbyshahzad`, `https://www.linkedin.com/in/shahzad-rasul-a4037b194/`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
