@@ -53,7 +53,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - shahzad.rasul123@outlook.com
+Shahzad Rasul - shahzad.rasul123@outlook.com
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/shahzadrasul/terraformbyshahzad)
 
