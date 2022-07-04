@@ -5,7 +5,7 @@
 <h3 align="center">Terraform for S3</h3>
 
   <p align="center">
-    project_description
+    Using Terraform to put an image in a bucket(bucket_a) which has its exif removed and placed in another bucket (bucket_b) using a Python written Lambda function.
     <br />
     <a href="https://github.com/shahzadrasul/terraformbyshahzad"><strong>Explore the docs »</strong></a>
     <br />
