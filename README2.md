@@ -27,7 +27,7 @@
 
 
 <!-- WHAT THIS REPO COVERS -->
-### Create two S3 buckets namely: bucket_a and bucket_b 
+### Create two S3 buckets namely (bucket_a and bucket_b)
 ### Create two IAM users and roles written in Terraform
 ### Create two S3 buckets namely: usera and userb 
 ### Create a Lambda function written in Python to strip image from its exif data
